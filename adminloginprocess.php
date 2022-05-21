@@ -2,7 +2,7 @@
 
 if($_SERVER['REQUEST_METHOD']=="POST"){
 
-    
+
     if(
         isset($_POST['uemail']) &&
         isset($_POST['upass'])  &&

@@ -15,7 +15,7 @@ if(
         <title>Approval</title>
     <style>
     body{
-        background-color: rgb(83, 161, 187);
+        background-color: #DAF7A6;
         display: flex;
         justify-content: center;
         align-items:center;
@@ -25,7 +25,7 @@ if(
         width: 500px;
         border: 2px solid #ccc;
         padding: 30px;
-        background: #478484;
+        background: white;
         border-radius: 15px;
         }    
     #ntable{
@@ -94,7 +94,7 @@ if(
                                 <tr>
                                     <td><?php echo $row ['Token']?></td>
                                     <td><?php echo $row ['reason']?></td>
-                                    <td><?php echo $row ['approval status']?></td>
+                                    <td><?php echo $row ['approval_status']?></td>
                                     <td><?php echo $row ['employeeEmp_id']?></td>
                                     <td><?php echo $row ['DepartmentManager_id']?></td>
                                 </tr>

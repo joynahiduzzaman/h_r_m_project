@@ -15,7 +15,7 @@ if(
         <title>Attendance</title>
     <style>
     body{
-        background-color: rgb(83, 161, 187);
+        background-color: #DAF7A6;
         display: flex;
         justify-content: center;
         align-items:center;
@@ -25,7 +25,7 @@ if(
         width: 500px;
         border: 2px solid #ccc;
         padding: 30px;
-        background: #478484;
+        background: white;
         border-radius: 15px;
         }    
     #ntable{
@@ -35,7 +35,7 @@ if(
                         
         text-align: center;
         }
-                    
+                
     #ntable th, #ntable td{
         border: 1px solid black;
         border-collapse: collapse;

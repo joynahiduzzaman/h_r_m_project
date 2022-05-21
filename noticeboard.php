@@ -1,11 +1,17 @@
+<?php
+
+session_start();
+if(isset($_SESSION['Memail'])
+&& !empty($_SESSION['Memail'])){
+    
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <style>
+<meta charset ="utf-8">
+<title>Notice Board</title>
+<style>
     body{
         background-color: #DAF7A6;
         display: flex;
@@ -60,28 +66,32 @@
 </head>
 <body>
 
-
-   <form action="adminloginprocess.php" method="POST">
-      <h2>Admin Login</h2>
-      <label for="uemail">Email: </label>
-      <input type="email" id="uemail" name="uemail" placeholder="Enter your email">
-      
-      <label for="upass">Password: </label>
-      <input type="password" id="upass" name="upass" placeholder="Enter your password">
-      <button type="submit">Login</button>
-      <br>
-      <br>
-      <input type="button" value="Employee login" onclick="elog()";>
-      <input type="button" value="Manager Login" onclick="mlog()";>
-
-      <script>
-        function elog(){
-            location.assign('employeelogin.php'); 
-        }
-        function mlog(){
-            location.assign('AdminLogin.php'); 
-        }
+    
+    <form action="noticeboardprocess.php" method="POST">
+    <h3>Post a notice here !!!</h3>
+    
+    <br>
+    <label for="title">Notice Title :</label>
+    <input type="text" id ="title" name="title">
+    <br><br>
+    <textarea rows="8" cols="50" name="notice" ></textarea>
+    <br><br>
+    <input type="submit" value="Post" >
+    <br><br>
+    <input type="button"  value="Back To Home" onclick="backfn();">
+    
+    </form>
+    <script>
+    function backfn(){
+        location.assign('AdminHome.php');
+    }
     </script>
-   </form>
 </body>
 </html>
+
+<?php
+}else{
+echo "<script>location.assign('AdminLogin.php')</script>";
+}
+?>
+

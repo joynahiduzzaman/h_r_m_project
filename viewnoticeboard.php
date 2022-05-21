@@ -15,7 +15,7 @@ if(
         <title>Notice board</title>
     <style>
     body{
-        background-color: rgb(83, 161, 187);
+        background-color: #DAF7A6;
         display: flex;
         justify-content: center;
         align-items:center;
@@ -25,7 +25,7 @@ if(
         width: 500px;
         border: 2px solid #ccc;
         padding: 30px;
-        background: #478484;
+        background: white;
         border-radius: 15px;
         }    
     #ntable{
@@ -94,8 +94,8 @@ if(
                                 <tr>
                                     <td><?php echo $row ['id']?></td>
                                     <td><?php echo $row ['time']?></td>
-                                    <td><?php echo $row ['notice name']?></td>
-                                    <td><?php echo $row ['Description']?></td>
+                                    <td><?php echo $row ['title']?></td>
+                                    <td><?php echo $row ['notice']?></td>
                                     <td><?php echo $row ['DepartmentManager_id']?></td>
                                 </tr>
                                 <?php

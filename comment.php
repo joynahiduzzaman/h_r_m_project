@@ -15,7 +15,7 @@ if(
         <title>Comment on complain</title>
     <style>
     body{
-        background-color: rgb(83, 161, 187);
+        background-color: #DAF7A6;
         display: flex;
         justify-content: center;
         align-items:center;
@@ -25,7 +25,7 @@ if(
         width: 500px;
         border: 2px solid #ccc;
         padding: 30px;
-        background: #478484;
+        background: white;
         border-radius: 15px;
         }    
     #ntable{
@@ -59,6 +59,7 @@ if(
             <table id='ntable'>
                     <thead>
                         <tr>
+                        <th>Manager Id</th>
                             <th>Id</th>
                             <th>Comment</th>
                         </tr>
@@ -66,10 +67,10 @@ if(
                     <tbody>
                     <?php
                     try{
-                        $conn=new PDO('mysql:host=localhost:3306;dbname=hrmproject;','root','');
+                        $conn=new PDO('mysql:host=localhost:3306;dbname=h_r_m_project;','root','');
                         $conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
                         
-                        $sqlquerystring="SELECT Complainid,comment FROM comment_on WHERE DepartmentManager_id= (
+                        $sqlquerystring="SELECT DepartmentManager_id,ComplainId,comment FROM comment_on WHERE DepartmentManager_id= (
                                                                                             SELECT DepartmentManager_id
                                                                                             FROM employee
                                                                                             WHERE Email= '$email'
@@ -89,7 +90,8 @@ if(
                             foreach($tabledata AS $row){
                                 ?>
                                 <tr>
-                                    <td><?php echo $row ['id']?></td>
+                                <td><?php echo $row ['DepartmentManager_id']?></td>
+                                    <td><?php echo $row ['ComplainId']?></td>
                                     <td><?php echo $row ['comment']?></td>
                                 </tr>
                                 <?php

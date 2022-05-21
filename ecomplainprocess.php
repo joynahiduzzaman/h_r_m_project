@@ -3,13 +3,15 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
     if(
         isset($_POST['complain']) &&
         isset($_POST['empid']) &&
+       
         
         !empty($_POST['complain']) &&
-        !empty($_POST['empid'])   
+        !empty($_POST['empid'])
     )
     {
         $complain=$_POST['complain'];
         $empid=$_POST['empid'];
+        
 
         try{
             $conn= new PDO('mysql:host=localhost:3306;dbname=h_r_m_project','root','');
@@ -17,8 +19,8 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
 
             $sqlquerystring="INSERT INTO complain VALUES(NULL,'$complain',NOW(),'$empid')";
 
-            $conn->exec($sqlquerystring);
-
+            $conn->exec($sqlquerystring); 
+            
             ?>
               <script>location.assign('employeehome.php')</script>
             <?php

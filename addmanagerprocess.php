@@ -19,7 +19,7 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
         $name=$_POST['mname'];
         $email=$_POST['memail'];
         $pass=$_POST['pass'];
-        $encpass=md5($pass);
+        //$encpass=md5($pass);
         $deptid=$_POST['deptid'];
         $number=$_POST['mnum'];
         $repid=$_POST['rep'];
@@ -28,7 +28,7 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
             $conn= new PDO('mysql:host=localhost:3306;dbname=h_r_m_project','root','');
             $conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
-            $sqlquerystring="INSERT INTO department VALUES(NULL,'$name','$email','$encpass','$deptid','$number','$repid')";
+            $sqlquerystring="INSERT INTO department VALUES(NULL,'$name','$email','$pass','$deptid','$number','$repid')";
 
             $conn->exec($sqlquerystring);
 

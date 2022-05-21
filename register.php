@@ -41,7 +41,7 @@ if(
             }
             .container{
                 max-width: 90%;
-                background-color: slategrey;
+                background-color: white;
                 padding: 35px;
                 margin: auto;
             }

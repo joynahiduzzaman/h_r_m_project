@@ -5,5 +5,5 @@
   ?>
      <script>location.assign('employeelogin.php')</script>
   <?php
-
+  
 ?>

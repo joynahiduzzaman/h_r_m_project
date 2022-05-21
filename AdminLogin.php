@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <style>
+<meta charset ="utf-8">
+<title>Manager login page</title>
+
+<style>
     body{
         background-color: #DAF7A6;
         display: flex;
@@ -59,29 +58,19 @@
     </style>
 </head>
 <body>
-
-
-   <form action="adminloginprocess.php" method="POST">
-      <h2>Admin Login</h2>
-      <label for="uemail">Email: </label>
-      <input type="email" id="uemail" name="uemail" placeholder="Enter your email">
-      
-      <label for="upass">Password: </label>
-      <input type="password" id="upass" name="upass" placeholder="Enter your password">
-      <button type="submit">Login</button>
-      <br>
-      <br>
-      <input type="button" value="Employee login" onclick="elog()";>
-      <input type="button" value="Manager Login" onclick="mlog()";>
-
-      <script>
-        function elog(){
-            location.assign('employeelogin.php'); 
-        }
-        function mlog(){
-            location.assign('AdminLogin.php'); 
-        }
-    </script>
-   </form>
+    
+    <form action="Admin_Login_Process.php" method="POST">
+    <h4>Manager Login</h4>
+    <br>
+    <label for="Memail">Email : </label>
+    <input type="email" id="Memail" name="Memail" placeholder="Enter your email" >
+    <br>
+    <label for="Mpassword">Password : </label>
+    <input type="password" id="Mpassword" name="Mpassword" placeholder="Enter your password">
+    <br>
+    <input type="submit" value="Login" >
+    
+    </form>
+    
 </body>
 </html>

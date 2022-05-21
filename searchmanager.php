@@ -16,7 +16,7 @@ if(
             <title>Search manager</title>
             <style>
                 body{
-                background-color: rgb(83, 161, 187);
+                background-color:  #DAF7A6;
                 display: flex;
                 justify-content: center;
                 align-items:center;
@@ -30,7 +30,7 @@ if(
                 width: 500px;
                 border: 2px solid #ccc;
                 padding: 30px;
-                background: #7f9c9c;
+                background:white;
                 border-radius: 15px;
             }
             h2{
@@ -46,7 +46,7 @@ if(
                 border-radius: 5px;
             }
             label{
-                color: rgb(233, 230, 230);
+                color: black;
                 font-size: 18px;
                 padding: 10px;
             }

@@ -7,7 +7,7 @@
     <title>Employee Login</title>
     <style>
     body{
-        background-color: rgb(83, 161, 187);
+        background-color: #DAF7A6;
         display: flex;
         justify-content: center;
         align-items:center;
@@ -21,7 +21,7 @@
         width: 500px;
         border: 2px solid #ccc;
         padding: 30px;
-        background: darkslategrey;
+        background: white;
         border-radius: 15px;
     }
     h2{
@@ -37,7 +37,7 @@
         border-radius: 5px;
     }
     label{
-        color: rgb(233, 230, 230);
+        color: black;
         font-size: 18px;
         padding: 10px;
     }

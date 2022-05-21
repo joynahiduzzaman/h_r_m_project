@@ -6,12 +6,14 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
         isset($_POST['enddate']) &&
         isset($_POST['reason']) &&
         isset($_POST['sl']) &&
+        isset($_POST['Deptmentmanage_id']) &&
         
         !empty($_POST['eid']) &&
         !empty($_POST['strdate']) &&
         !empty($_POST['enddate']) &&
         !empty($_POST['reason']) &&
-        !empty($_POST['sl'])   
+        !empty($_POST['sl']) &&
+        !empty($_POST['Deptmentmanage_id']) 
     )
     {
         $empid=$_POST['eid'];
@@ -19,12 +21,13 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
         $enddate=$_POST['enddate'];
         $reason=$_POST['reason'];
         $stationleave=$_POST['sl'];
-
+        $Departmentmanager_id=$_POST['Deptmentmanage_id'];
+        
         try{
             $conn= new PDO('mysql:host=localhost:3306;dbname=h_r_m_project','root','');
             $conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
-            $sqlquerystring="INSERT INTO emp_leave (Token,startdate,enddate,reason,stationleave,employeeEmp_id) VALUES(NULL,'$strdate','$enddate','$reason','$stationleave','$empid')";
+            $sqlquerystring="INSERT INTO emp_leave (Token,startdate,enddate,reason,stationleave,employeeEmp_id,Departmentmanager_id) VALUES(NULL,'$strdate','$enddate','$reason','$stationleave','$empid','$Departmentmanager_id')";
 
             $conn->exec($sqlquerystring);
 
